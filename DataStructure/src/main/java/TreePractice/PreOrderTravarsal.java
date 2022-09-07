@@ -30,8 +30,20 @@ public class PreOrderTravarsal {
 								t2.next = t4;
 				}
 
+				public void preOrder(TreeNode root){
+								if(root == null){
+												return;
+								}
+								System.out.println(root.data);
+								preOrder(root.prev);
+								preOrder(root.next);
+				}
+
 				public static void main(String[] args){
 
+PreOrderTravarsal bt = new PreOrderTravarsal();
+bt.createNode();
+bt.preOrder(bt.root);
 				}
 
 }
